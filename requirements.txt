@@ -1,0 +1,4 @@
+rich
+beautifulsoup4
+selenium
+selenium-stealth

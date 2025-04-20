@@ -1,0 +1,19 @@
+{
+    "username": "",
+    "password": "",
+    "headless" : false,
+    "download_directory": "downloads/",
+    "disable_images": false,
+    "disable_videos": false,
+    "driver_executable_path" : "./chromedriver.exe",
+    "disable_saving_password": true,
+    "select_results": false,
+    "default_timeout" : 10,
+    "log_file" : "selenium_log.log",
+    "post_count" : 100,
+    "save_directory" : "scraped search/",
+    "search_queries":[
+        "kandy"
+    ]
+}
+
