@@ -2,18 +2,6 @@
 
 A Python project for scraping Instagram posts based on specific hashtags. This tool uses **Selenium** for browser automation and **BeautifulSoup** for scraping content from Instagram. It's designed to fetch posts by hashtag, with customizable options to automate login, scrape content, and interact with Instagram posts.
 
----
-
-## Table of Contents 📑
-
-- [Features](#features)
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Setup](#setup)
-- [Usage](#usage)
-- [Configuration](#configuration)
-- [Logging](#logging)
-- [License](#license)
 
 ---
 
