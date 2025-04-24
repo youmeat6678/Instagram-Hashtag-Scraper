@@ -1,131 +1,160 @@
-# Instagram Hashtag Scraper 📸🔍
+### Instagram Hashtag Scraper 🌟
 
-A Python project for scraping Instagram posts based on specific hashtags. This tool uses **Selenium** for browser automation and **BeautifulSoup** for scraping content from Instagram. It's designed to fetch posts by hashtag, with customizable options to automate login, scrape content, and interact with Instagram posts.
+
+This is an **Instagram hashtag and user reels scraping tool** 🤖 that allows you to extract data from Instagram's search results and user profiles. It utilizes **Selenium with ChromeDriver** 🚗 for web automation and **BeautifulSoup** 🥣 for parsing HTML content.
 
 
 ---
 
 ## Features ✨
-
-- **Hashtag Scraping** 🏷️: Scrape Instagram posts by hashtag (e.g., `#nature`, `#technology`).
-- **Automatic Login** 🔑: Logs in to Instagram using provided credentials.
-- **Headless Browser** 🌐: Supports headless mode for automation without GUI.
-- **Customizable Scraping** ⚙️: Allows user-defined post count and result filtering.
-- **Stealth Mode** 🕶️: Prevents detection of Selenium automation using the `selenium-stealth` library.
-- **Logging** 📝: Built-in logging system for tracking progress and errors.
-
----
-
-## Requirements 📋
-
-- Python 3.6+
-- Chrome WebDriver (ensure it's compatible with your Chrome version)
-- Required Python packages (listed below)
+- **Search Results Scraping**: Extract post links based on specific hashtags 🔍.
+- **User Reels Scraping**: Scrape reel links from user profiles 🎬.
+- **Configurable Options**: Customize behavior via `config.json` (e.g., headless mode, timeouts) ⚙️.
+- **Error Handling**: Robust error handling for network issues, login failures, and unexpected changes in Instagram's layout 🚨.
+- **Logging**: Detailed logs for debugging and tracking progress 📝.
+- **Progress Visualization**: Real-time progress updates using the `rich` library 📊.
 
 ---
 
-## Installation ⚙️
+## Requirements 🛠️
+To run this scraper, ensure you have the following installed:
+- **Python 3.8 or higher** 🐍
+- **Google Chrome** (latest version recommended) 🌐
+- **ChromeDriver** (matching your Chrome version) 🚗
 
-1. Clone the repository:
+### Install Dependencies
+Run the following command to install the required Python packages:
+```bash
+pip install -r requirements.txt
+```
+
+Dependencies include:
+- `selenium`
+- `beautifulsoup4`
+- `rich`
+- `webdriver-manager` (optional, for automatic driver management)
+
+---
+
+## Setup Instructions 🚀
+
+1. **Clone the Repository** 📂
    ```bash
    git clone https://github.com/xlastfire/Instagram-Hashtag-Scraper.git
-   cd instagram-hashtag-scraper
+   cd Instagram-Hashtag-Scraper
    ```
 
-2. Create a virtual environment (optional but recommended):
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate  # For Windows use: venv\Scripts\activate
-   ```
-
-3. Install the required dependencies:
+2. **Install Dependencies** 💻
    ```bash
    pip install -r requirements.txt
    ```
 
----
+3. **Download ChromeDriver** 🚗
+   - Download the ChromeDriver executable that matches your installed version of Google Chrome from the [official site](https://sites.google.com/chromium.org/driver/).
+   - Place the `chromedriver` executable in a directory of your choice and update the path in `config.json`.
 
-## Setup 🔧
+4. **Update Configuration** 📝
+   Edit the `config.json` file to include:
+   - Your Instagram credentials (`username` and `password`) 🔑.
+   - Desired queries (hashtags or usernames) under the `queries` section.
 
-1. Download and install **ChromeDriver**:
-   - Go to [ChromeDriver downloads](https://sites.google.com/a/chromium.org/chromedriver/) and download the driver for your operating system.
-   - Ensure the version of ChromeDriver matches your installed version of Chrome.
-
-2. Place the **chromedriver** executable in the appropriate path or specify it in the `config.json` file.
-
----
-
-## Usage 🚀
-
-1. **Create a `config.json` file** in the project root with your Instagram credentials and preferences.
-
-   Example `config.json`:
-
-   ```json
-   {
-     "username": "your_username",
-     "password": "your_password",
-     "headless": false, 
-     "download_directory": "/path/to/download",
-     "disable_images": false,
-     "disable_videos": false,
-     "driver_executable_path": "/path/to/chromedriver",
-     "disable_saving_password": true,
-     "select_results": true,
-     "default_timeout": 30,
-     "log_file": "scraper.log",
-     "post_count": 50,
-     "save_directory": "/path/to/save",
-     "search_queries": ["nature", "technology"]
-   }
-   ```
-
-2. **Run the scraper** by executing the following in your terminal:
-
+5. **Run the Script** ▶️
+   Execute the scraper:
    ```bash
    python scraper.py
    ```
-
-   This will start the script, log you into Instagram, search for posts based on your provided hashtag(s), and scrape the content.
 
 ---
 
 ## Configuration ⚙️
 
-The `config.json` file should contain the following keys:
+The `config.json` file contains all configurable options. Below is an example configuration:
 
-- **username**: Your Instagram username.
-- **password**: Your Instagram password.
-- **headless**: Set to `true` for headless operation (without GUI). **(Note: Didn't check)**
-- **download_directory**: Path where downloaded media will be stored.
-- **disable_images**: Set to `true` to disable image loading in the browser.
-- **disable_videos**: Set to `true` to disable video loading in the browser.
-- **driver_executable_path**: Path to the ChromeDriver executable.
-- **disable_saving_password**: Set to `true` to disable saving passwords.
-- **select_results**: Set to `true` to allow interactive selection of search results.
-- **default_timeout**: Timeout value (in seconds) for waiting for elements to load.
-- **log_file**: Path to the log file where logs will be saved.
-- **post_count**: Number of posts to scrape.
-- **save_directory**: Directory where scraped posts will be saved.
-- **search_queries**: List of hashtags to search for on Instagram (e.g., `#nature`, `#technology`).
+```json
+{
+  "username": "your_instagram_username",
+  "password": "your_instagram_password",
+  "driver_executable_path": "/path/to/chromedriver",
+  "headless": true,
+  "disable_images": true,
+  "disable_videos": false,
+  "default_timeout": 10,
+  "search_post_count": 100,
+  "follow_user_reels": false,
+  "log_file": "logs/instagram.log",
+  "search_path": "data/search/",
+  "user_reels_path": "data/user_reels/",
+  "queries": {
+    "#nature": "search",
+    "natgeo": "user_reels"
+  },
+  "completed_queries": {}
+}
+```
+
+### Key Fields 🔑
+- `username`, `password`: Your Instagram login credentials 🔑.
+- `driver_executable_path`: Path to the ChromeDriver executable 🚗.
+- `headless`: Run browser in headless mode (no GUI) 👻.
+- `disable_images`, `disable_videos`: Optimize performance by disabling media loading 🖼️🎬.
+- `search_post_count`: Target number of posts to scrape per search query 🔢.
+- `follow_user_reels`: Automatically follow users when scraping their reels 👥.
+- `queries`: Dictionary of queries to process, where keys are hashtags or usernames and values are either `"search"` or `"user_reels"`.
 
 ---
 
-## Logging 📝
+## Usage 📋
 
-The scraper uses Python's `logging` module to log events during execution. Logs are saved to the file specified in the `log_file` field in `config.json`. By default, logs are also printed to the console for real-time monitoring.
+### Scraping Hashtags 🔍
+Add your desired hashtags to the `queries` section in `config.json` with the value `"search"`. For example:
+```json
+"queries": {
+  "#nature": "search",
+  "#travel": "search"
+}
+```
+Run the script:
+```bash
+python scraper.py
+```
+Scraped data will be saved in the directory specified by `search_path`.
 
-You can adjust the logging level by modifying the `level` parameter in the `setup_logging` function.
+### Scraping User Reels 🎬
+Add usernames to the `queries` section with the value `"user_reels"`. For example:
+```json
+"queries": {
+  "natgeo": "user_reels",
+  "bbcearth": "user_reels"
+}
+```
+Run the script:
+```bash
+python scraper.py
+```
+Reel links will be saved in the directory specified by `user_reels_path`.
 
+### Logs 📝
+Detailed logs are stored in the file specified by `log_file`. Use these logs to debug issues or track progress.
+
+---
+
+## Contributing 👥
+
+Contributions are welcome! If you'd like to contribute, please follow these steps:
+1. Fork the repository 🍴.
+2. Create a new branch for your feature or bug fix 🌿.
+3. Submit a pull request with a clear description of your changes 📝.
+
+Please ensure your code adheres to the project's coding standards and includes appropriate documentation.
 
 ---
 
 ## License 📄
 
-This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
-
-Made with ❤️ by [**xlastfire**](https://github.com/xlastfire)
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
 
+## Disclaimer ⚠️
 
+This tool is intended for educational and research purposes only. Ensure you comply with Instagram's [Terms of Service](https://help.instagram.com/581066165581870) before using it. The author is not responsible for any misuse or violations of terms resulting from the use of this script.
